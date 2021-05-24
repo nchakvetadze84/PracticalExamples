@@ -11,5 +11,10 @@ namespace PracticalExamples
         public int Id { set; get; }
         public  string Name{ set; get; }
 
+        public string GetAccHolder()
+        {
+            return Name ?? "Account Holder";
+        }
+
     }
 }

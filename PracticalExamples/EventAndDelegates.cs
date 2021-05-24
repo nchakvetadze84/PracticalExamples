@@ -18,12 +18,11 @@ namespace PracticalExamples
         // 2. Define event base on delegate
         // 3. Raise event
 
-        public delegate void CarPublishedEventHandler(object source, EventArgs args);
+        //public delegate void CarPublishedEventHandler(object source, EventArgs args);
+        //public event CarPublishedEventHandler CarPublished;
 
-
-        public event CarPublishedEventHandler CarPublished;
-
-
+        public event EventHandler<EventArgs> CarPublished;
+        
         public void Publish()
         {
             Console.WriteLine("Car is publishing ....");
