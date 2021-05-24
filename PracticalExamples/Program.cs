@@ -25,15 +25,15 @@ namespace PracticalExamples
             #endregion Events  & Delegate
 
             #region  Anonymous Methods
-            
-            DelegateHelper.Init();
+
+            //DelegateHelper.Init();
 
             #endregion Anonymous Methods
 
             //var myInt = 8291;
             //Console.WriteLine(myInt.ReverseDigits());
 
-            //Reflection.Init();
+            Reflection.Init();
 
             Console.ReadLine();
         }
