@@ -17,6 +17,9 @@ namespace PracticalExamples
 
             string newDigits = new string(digits);
 
+            
+            //int.TryParse("ra", out var cast);
+            //var test = int.Parse("ra");
             return int.Parse(newDigits);
         }
     }

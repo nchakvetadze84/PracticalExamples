@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace PracticalExamples
 {
-    class Reflection
+    class Reflection  : Object
     {
         public static void Init()
         {
             Type type = Type.GetType("PracticalExamples.Account");
 
             var props = type.GetProperties();
-            
+
             foreach (var propertyInfo in props)
             {
                 Console.WriteLine(propertyInfo.Name);
@@ -41,7 +41,7 @@ namespace PracticalExamples
 
 
             result = mi.Invoke(obj, null);
-            Console.WriteLine(result);
+            //Console.WriteLine(result);
 
             //var res = mi.Invoke(obj, new object[] { true, 2 });
 

@@ -13,8 +13,14 @@ namespace PracticalExamples
 
         public string GetAccHolder()
         {
+            //var newString = Name;
+            //if (Name == null)
+            //{
+            //    newString = "Account Holder";
+            //}
+            //return newString;
+
             return Name ?? "Account Holder";
         }
-
     }
 }

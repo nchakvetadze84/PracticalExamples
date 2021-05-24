@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoxingUnboxing.cs" />
+    <Compile Include="DelegateHelper.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="EventAndDelegates.cs" />
     <Compile Include="Lambda.cs" />
@@ -55,5 +56,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
