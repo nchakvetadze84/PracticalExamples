@@ -33,8 +33,9 @@ namespace PracticalExamples
             //var myInt = 8291;
             //Console.WriteLine(myInt.ReverseDigits());
 
-            Reflection.Init();
+            //Reflection.Init();
 
+            Linq.Start();
             Console.ReadLine();
         }
     }
