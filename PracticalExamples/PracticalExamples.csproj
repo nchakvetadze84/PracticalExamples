@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BoxingUnboxing.cs" />
     <Compile Include="DelegateHelper.cs" />
+    <Compile Include="File.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="EventAndDelegates.cs" />
     <Compile Include="Lambda.cs" />

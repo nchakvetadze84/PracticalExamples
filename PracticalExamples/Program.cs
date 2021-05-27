@@ -35,7 +35,18 @@ namespace PracticalExamples
 
             //Reflection.Init();
 
-            Linq.Start();
+            //Linq.Start();
+
+            #region  File IO
+
+            MyFile.SimpleFileIO();
+            MyFile.StreamWriterReaderApp();
+            MyFile.BinaryWriterReader();
+
+            #endregion  File IO
+
+
+
             Console.ReadLine();
         }
     }
