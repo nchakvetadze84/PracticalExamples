@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace PracticalExamples
@@ -35,17 +38,24 @@ namespace PracticalExamples
 
             //Reflection.Init();
 
-            //Linq.Start();
+            //Linq.QueryStringWithOperators();
 
             #region  File IO
 
-            MyFile.SimpleFileIO();
-            MyFile.StreamWriterReaderApp();
-            MyFile.BinaryWriterReader();
+            //MyFile.SimpleFileIO();
+            //MyFile.StreamWriterReaderApp();
+            //MyFile.BinaryWriterReader();
 
             #endregion  File IO
 
+            //WordCounter.Counter();
 
+            Debug.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)} ManagedThreadId{Thread.CurrentThread.ManagedThreadId} {Environment.NewLine}");
+
+            Threading.Start();
+
+            //var inst = new LinqJoin();
+            //inst.Join();
 
             Console.ReadLine();
         }

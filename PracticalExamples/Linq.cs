@@ -13,11 +13,13 @@ namespace PracticalExamples
             Console.WriteLine("***** LINQ: Simple to WAY Complex *****\n");
 
             string[] names = { "Tom", "Dick", "Harry" };
-            var enumerable = Enumerable.Where(names, n => n.Length >= 4);
-            //IEnumerable<string> filteredNames = Enumerable.OrderBy(enumerable, (string n) => n.Length);
 
-            //foreach (string n in filteredNames)
-            //    Console.WriteLine(n);
+            var enumerable = names.Where(n => n.Length >= 4);
+
+            IEnumerable<string> filteredNamesEnumerable = Enumerable.OrderBy(enumerable, (string n) => n.Length);
+
+            foreach (string n in filteredNamesEnumerable)
+                Console.WriteLine(n);
 
             //fluent syntax
             //IEnumerable<string> filteredNames = names.Where(n => n.Length >= 4);
@@ -30,24 +32,24 @@ namespace PracticalExamples
 
             //query expression syntax
             IEnumerable<string> filteredNames = from n in names
-                where n.Length >= 4
-                orderby n.Length
-                select n;
+                                                where n.Length >= 4
+                                                orderby n.Length
+                                                select n;
 
 
 
-            QueryStringWithOperators();
-            Console.WriteLine();
-            QueryStringsWithEnumerableAndLambdas();
-            Console.WriteLine();
-            QueryStringsWithAnonymousMethods();
-            Console.WriteLine();
-            VeryComplexQueryExpression.QueryStringsWithRawDelegates();
-            Console.ReadLine();
+            //QueryStringWithOperators();
+            //Console.WriteLine();
+            //QueryStringsWithEnumerableAndLambdas();
+            //Console.WriteLine();
+            //QueryStringsWithAnonymousMethods();
+            //Console.WriteLine();
+            //VeryComplexQueryExpression.QueryStringsWithRawDelegates();
+            //Console.ReadLine();
         }
 
         #region LINQ operators
-        static void QueryStringWithOperators()
+        public static void QueryStringWithOperators()
         {
             Console.WriteLine("***** Using Query Operators *****");
 
@@ -55,12 +57,15 @@ namespace PracticalExamples
                 "Fallout 3", "Daxter", "System Shock 2"};
 
             var subset = (from game in currentVideoGames
-                          where game.Contains(" ")
-                          orderby game
-                          select game).Take(1);
+                                          where game.Contains(" ")
+                                          //orderby game descending
+                                          select game).Skip(1).Take(1);
 
-            var subset2 = currentVideoGames.Where(game => game.Contains(" "))
-                            .Take(2);
+            //var subset2 = currentVideoGames.Where(game => game.Contains(" ")).OrderByDescending( a => a)
+            //                .Skip(1).Take(1); 
+
+            //foreach (string s in subset2)
+            //    Console.WriteLine("Item: {0}", s);
 
             foreach (string s in subset)
                 Console.WriteLine("Item: {0}", s);
@@ -114,8 +119,8 @@ namespace PracticalExamples
                 "Fallout 3", "Daxter", "System Shock 2"};
 
             // Build the necessary Func<> delegates using anonymous methods.
-            Func<string, bool> searchFilter =
-                game => game.Contains(" ");
+            Func<string, bool> searchFilter = game => game.Contains(" ");
+
             Func<string, string> itemToProcess = s => s;
 
             // Pass the delegates into the methods of Enumerable.
