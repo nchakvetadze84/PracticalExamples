@@ -12,3 +12,8 @@ D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.cspr
 D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.csproj.CoreCompileInputs.cache
 D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.exe
 D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.pdb
+D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\EntityFramework.dll
+D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\EntityFramework.xml
+D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.csproj.CopyComplete

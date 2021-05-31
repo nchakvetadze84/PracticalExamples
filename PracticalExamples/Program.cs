@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using PracticalExamples.DataAccess;
 
 namespace PracticalExamples
 {
@@ -52,10 +53,12 @@ namespace PracticalExamples
 
             Debug.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)} ManagedThreadId{Thread.CurrentThread.ManagedThreadId} {Environment.NewLine}");
 
-            Threading.Start();
+            //Threading.Start();
 
             //var inst = new LinqJoin();
             //inst.Join();
+
+            EFDemo.PrintBankInfo();
 
             Console.ReadLine();
         }
