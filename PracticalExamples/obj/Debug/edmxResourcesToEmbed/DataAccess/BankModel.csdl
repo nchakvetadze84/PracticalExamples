@@ -26,6 +26,7 @@
     <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
     <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Accounts" Relationship="Self.FK_Accounts_Clients" FromRole="Clients" ToRole="Accounts" />
+    <Property Name="Address" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_Accounts_Clients">
     <End Role="Clients" Type="Self.Client" Multiplicity="1" />
@@ -46,5 +47,22 @@
       <End Role="Clients" EntitySet="Clients" />
       <End Role="Accounts" EntitySet="Accounts" />
     </AssociationSet>
+    <EntitySet Name="Accounts_v" EntityType="BANKModel.Accounts_v" />
   </EntityContainer>
+  <EntityType Name="Accounts_v">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ClientId" />
+      <PropertyRef Name="AccNo" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ClientId" Type="Int32" Nullable="false" />
+    <Property Name="AccNo" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PeronalCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

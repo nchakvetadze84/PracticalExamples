@@ -30,6 +30,7 @@ namespace PracticalExamples.DataAccess
         public string Email { get; set; }
         public string Status { get; set; }
         public System.DateTime CreateDate { get; set; }
+        public string Address { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Account> Accounts { get; set; }

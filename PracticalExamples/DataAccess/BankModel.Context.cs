@@ -20,9 +20,12 @@ namespace PracticalExamples.DataAccess
         public BANKEntities()
             : base("name=BANKEntities")
         {
+            Configuration.LazyLoadingEnabled = false;
+
             Database.Log = s => Debug.WriteLine(s);
+
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -30,5 +33,6 @@ namespace PracticalExamples.DataAccess
     
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Accounts_v> Accounts_v { get; set; }
     }
 }

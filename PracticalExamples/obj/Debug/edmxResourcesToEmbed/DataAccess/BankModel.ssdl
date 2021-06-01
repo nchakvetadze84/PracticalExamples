@@ -24,6 +24,25 @@
     <Property Name="Email" Type="nvarchar" MaxLength="250" />
     <Property Name="Status" Type="varchar" MaxLength="1" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="550" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BANK.dbo.Accounts_v' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Accounts_v">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ClientId" />
+      <PropertyRef Name="AccNo" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="AccNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="1" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PeronalCode" Type="varchar" MaxLength="30" />
   </EntityType>
   <Association Name="FK_Accounts_Clients">
     <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
@@ -40,6 +59,17 @@
   <EntityContainer Name="BANKModelStoreContainer">
     <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accounts_v" EntityType="Self.Accounts_v" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Accounts_v].[Id] AS [Id], 
+    [Accounts_v].[ClientId] AS [ClientId], 
+    [Accounts_v].[AccNo] AS [AccNo], 
+    [Accounts_v].[Status] AS [Status], 
+    [Accounts_v].[FirstName] AS [FirstName], 
+    [Accounts_v].[LastName] AS [LastName], 
+    [Accounts_v].[PeronalCode] AS [PeronalCode]
+    FROM [dbo].[Accounts_v] AS [Accounts_v]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_Accounts_Clients" Association="Self.FK_Accounts_Clients">
       <End Role="Clients" EntitySet="Clients" />
       <End Role="Accounts" EntitySet="Accounts" />

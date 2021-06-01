@@ -15,6 +15,7 @@
     <EntitySetMapping Name="Clients">
       <EntityTypeMapping TypeName="BANKModel.Client">
         <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="PeronalCode" ColumnName="PeronalCode" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -25,6 +26,19 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts_v">
+      <EntityTypeMapping TypeName="BANKModel.Accounts_v">
+        <MappingFragment StoreEntitySet="Accounts_v">
+          <ScalarProperty Name="PeronalCode" ColumnName="PeronalCode" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AccNo" ColumnName="AccNo" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

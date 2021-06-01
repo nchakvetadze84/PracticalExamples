@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="BANKModel.Account" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BANKModel.Client" Width="1.5" PointX="2" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="BANKModel.FK_Accounts_Clients" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BANKModel.Accounts_v" Width="1.5" PointX="10.625" PointY="1.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
