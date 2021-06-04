@@ -13,19 +13,17 @@ namespace PracticalExamples.DataAccess
         {
             using (var context = new BANKEntities())
             {
-                var accounts1 = from n in context.Accounts select n;
+                //var accounts1 = from n in context.Accounts select n;
 
-                if (DateTime.Now.Minute == 35)
-                {
-                    accounts1 = accounts1.Where(a => a.AccNo == "GE74BR02056060565000000");
-                }
-                accounts1 = accounts1.OrderBy(a => a.CreateDate);
+                //if (DateTime.Now.Minute == 35)
+                //{
+                //    accounts1 = accounts1.Where(a => a.AccNo == "GE74BR02056060565000000");
+                //}
+                //accounts1 = accounts1.OrderBy(a => a.CreateDate);
 
-                accounts1 = accounts1.Skip(0).Take(1);
+                //accounts1 = accounts1.Skip(0).Take(1);
 
-                var result = accounts1.ToList();
-
-                //var accounts = context.Accounts.ToList();
+                //var result = accounts1.ToList();
 
 
                 #region Explicit Loading 
@@ -46,8 +44,8 @@ namespace PracticalExamples.DataAccess
 
                 #region Add & attach
 
-                //var newAccount = new Account {AccNo = "6GE666PR78970000000", ClientId = 1002, Status = "A", CreateDate = DateTime.Now};
-                //context.Accounts.Remove(newAccount);
+                var newAccount = new Account { AccNo = "6GE666PR78970000000", ClientId = 1002, Status = "A", CreateDate = DateTime.Now };
+                context.Accounts.Add(newAccount);
                 //var newAccountAttach = new Account { AccNo = "6GE666PR78933333", ClientId = 1001, Status = "A", CreateDate = DateTime.Now };
                 //context.Accounts. (newAccountAttach);
 
@@ -64,7 +62,7 @@ namespace PracticalExamples.DataAccess
                 #endregion
 
 
-                //context.SaveChanges();
+                context.SaveChanges();
             }
         }
     }

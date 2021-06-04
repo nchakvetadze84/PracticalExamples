@@ -60,6 +60,16 @@ namespace PracticalExamples
 
             EFDemo.PrintBankInfo();
 
+            //var date = Convert.ToDateTime("21/01/2020");
+
+            //var dt = new DateTime(2020, 1, 1);
+
+
+
+
+            ///Guid n = Guid.NewGuid();
+
+
             Console.ReadLine();
         }
     }
