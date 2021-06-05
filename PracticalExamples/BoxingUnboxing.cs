@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace PracticalExamples
 {
-    class BoxingUnboxing
+    public class BoxingUnboxing
     {
+        public string Model { set; get; }
 
         public static void InitBoxingUnboxing()
         {
@@ -24,8 +25,14 @@ namespace PracticalExamples
             int unBoxingInt = (int)(decimal)boxing;
 
             Console.WriteLine(unBoxingInt);
+        }
 
+        public override string ToString()
+        {
+            if (Model != null)
+                return Model.ToString();
 
+            return "Lexus";
         }
     }
 }

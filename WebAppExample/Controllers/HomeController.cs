@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebAppExample.Models;
 
 namespace WebAppExample.Controllers
 {
@@ -10,12 +11,18 @@ namespace WebAppExample.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var model = new List<Currency>
+            {
+                new Currency { Code = "GEL", Description = "ლარი" },
+                new Currency { Code = "USD", Description = "დოლარი" }
+            };
+            return View("Currencies", model);
         }
 
         public ActionResult About(string id)
         {
             ViewBag.Message = "Your application description page." + id;
+            return PartialView();
 
             //return View();
             return View("NotIndex");

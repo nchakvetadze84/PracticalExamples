@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = Request.Browser.IsBrowser("Chrome") ? "~/Views/Shared/_Layout2.cshtml" : "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="jumbotron">
