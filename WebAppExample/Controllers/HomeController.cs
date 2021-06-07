@@ -11,12 +11,7 @@ namespace WebAppExample.Controllers
     {
         public ActionResult Index()
         {
-            var model = new List<Currency>
-            {
-                new Currency { Code = "GEL", Description = "ლარი" },
-                new Currency { Code = "USD", Description = "დოლარი" }
-            };
-            return View("Currencies", model);
+            return View();
         }
 
         public ActionResult About(string id)
@@ -34,5 +29,7 @@ namespace WebAppExample.Controllers
 
             return View();
         }
+
+        
     }
 }

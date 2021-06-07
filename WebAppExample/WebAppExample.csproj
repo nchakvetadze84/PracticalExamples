@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CurrencyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,7 +167,10 @@
     <Content Include="Views\Home\NotIndex.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Home\_partial.cshtml" />
-    <Content Include="Views\Home\Currencies.cshtml" />
+    <Content Include="Views\Currency\Index.cshtml" />
+    <Content Include="Views\Currency\Create.cshtml" />
+    <Content Include="Views\Currency\Edit.cshtml" />
+    <Content Include="Views\Currency\Calculate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
