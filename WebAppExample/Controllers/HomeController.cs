@@ -30,6 +30,11 @@ namespace WebAppExample.Controllers
             return View();
         }
 
-        
+        [HttpPost]
+        public ActionResult Calc(CurrencyViewModel data)
+        {
+            var random = new Random().Next(2, 4);
+            return Json(random, JsonRequestBehavior.AllowGet);
+        }
     }
 }

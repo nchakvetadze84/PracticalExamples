@@ -13,12 +13,30 @@
 </head>
 <body>
     <div>
+        @*List:
+            @{
+                Html.RenderPartial("List",  new List<string> { "EUR", "GBP" } );
+            }*@
         <form action="/" method="post" class="form-inline">
-            
-            @Html.DropDownListFor(n => n.FromCurrency, Model.Curnecies,  htmlAttributes: new { @class = "form-control" })
 
+            @Html.DropDownListFor(n => n.FromCurrency, Model.Curnecies, htmlAttributes: new { @class = "form-control" })
+
+            <input id="toTxt" class="form-control" />
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <button class="btn btn-default" id="btnCalc" name="Calc" type="button">Calculate</button>
+                </div>
+            </div>
         </form>
 
     </div>
+
+
+    @*<script>
+        function calcClick() {
+            alert(3);
+        }
+    </script>*@
 </body>
 </html>

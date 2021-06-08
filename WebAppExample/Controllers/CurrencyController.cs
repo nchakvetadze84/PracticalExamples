@@ -25,10 +25,10 @@ namespace WebAppExample.Controllers
         {
             var model = new CurrencyViewModel
             {
-                Curnecies = new  List<SelectListItem>()
+                Curnecies = new List<SelectListItem>()
             };
-            model.Curnecies.Add(new SelectListItem { Text = "ლარი", Value ="GEL" });
-            model.Curnecies.Add(new SelectListItem { Text = "დოლარი", Value = "USD" });
+            model.Curnecies.Add(new SelectListItem { Text = "GEL", Value = "GEL" });
+            model.Curnecies.Add(new SelectListItem { Text = "USD", Value = "USD" });
 
             //new List<Currency>
             //{
@@ -68,9 +68,9 @@ namespace WebAppExample.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
-             
 
-            return View(new Currency { Code = "GEL", Description = "ლარი" } );
+
+            return View(new Currency { Code = "GEL", Description = "ლარი" });
         }
 
         // POST: Genres/Edit/5
@@ -108,6 +108,16 @@ namespace WebAppExample.Controllers
             {
                 return View();
             }
+        }
+
+
+        [ChildActionOnly]
+        public ActionResult List(IEnumerable<string> source)
+        {
+            if (source == null)
+                source = new List<string> { "GEL", "USD", "EUR" };
+
+            return View(source);
         }
     }
 }
