@@ -8,7 +8,6 @@ D:\Projects\Boxing_Unboxing\Boxing_Unboxing\obj\Debug\PracticalExamples.pdb
 D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\PracticalExamples.exe.config
 D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\PracticalExamples.exe
 D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\PracticalExamples.pdb
-D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.csprojAssemblyReference.cache
 D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.csproj.CoreCompileInputs.cache
 D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.exe
 D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.pdb
@@ -17,3 +16,4 @@ D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\EntityFramework.SqlSer
 D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\EntityFramework.xml
 D:\Projects\PracticalExamples\PracticalExamples\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.csproj.CopyComplete
+D:\Projects\PracticalExamples\PracticalExamples\obj\Debug\PracticalExamples.csproj.AssemblyReference.cache

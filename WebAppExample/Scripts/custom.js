@@ -19,13 +19,16 @@ $("#document").ready(function () {
     $("#btnCalc").click(function () {
         // alert("");
         var data = {};
-        //data.FromCurrency = $("#toTxt").val();
-        data.ToAmount = $("#toTxt").val();
+        data.FromCurrency = 'GEL';
+        data.FromAmount = 10;
+        data.ToAmount = 5;
 
         $.ajax({
             type: 'POST',
             url: '/Home/Calc',
-            data:  'data: ' + JSON.stringify(data) + '}',
+            data: data,
+            //data: { FromCurrency: 'GEL', FromAmount: 10 },
+            //data:  'data: ' + JSON.stringify(data) ,
             dataType: 'json',
             contextType: 'application/json; charset=utf-8',
             success: function (data) {

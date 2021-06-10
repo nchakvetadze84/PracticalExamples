@@ -44,8 +44,18 @@ namespace PracticalExamples.DataAccess
 
                 #region Add & attach
 
+                if (context.Accounts.Any(a => a.AccNo == "6GE666PR78970000000"))
+                {
+                    throw new Exception("Account already exits");
+                }
+
                 var newAccount = new Account { AccNo = "6GE666PR78970000000", ClientId = 1002, Status = "A", CreateDate = DateTime.Now };
                 context.Accounts.Add(newAccount);
+
+
+                context.Accounts.Attach(newAccount);
+
+
                 //var newAccountAttach = new Account { AccNo = "6GE666PR78933333", ClientId = 1001, Status = "A", CreateDate = DateTime.Now };
                 //context.Accounts. (newAccountAttach);
 
@@ -53,11 +63,11 @@ namespace PracticalExamples.DataAccess
 
                 //account.AccNo = "GE74BR02056060565000000";
 
-                //foreach (var entry in context.ChangeTracker.Entries())
-                //{
-                //    Console.WriteLine("Entity Name: {0}", entry.Entity.GetType().FullName);
-                //    Console.WriteLine("Status: {0}", entry.State);
-                //}
+                foreach (var entry in context.ChangeTracker.Entries())
+                {
+                    Console.WriteLine("Entity Name: {0}", entry.Entity.GetType().FullName);
+                    Console.WriteLine("Status: {0}", entry.State);
+                }
 
                 #endregion
 

@@ -9,29 +9,46 @@ namespace WebAppExample.Controllers
 {
     public class HomeController : Controller
     {
+        [OutputCache(Duration = 5)]
         public ActionResult Index()
         {
+            Session["Index"] = "Index View";
+            TempData["Index"] = "Index View";
             return View();
         }
 
+
+        //[Route("")]
         public ActionResult About(string id)
         {
-            ViewBag.Message = "Your application description page." + id;
-            return PartialView();
-
-            //return View();
-            return View("NotIndex");
+            ViewBag.Message = Session["Index"];
+            ViewBag.Message = TempData["Index"];
+            
+            return View();
         }
 
+        [Route("ContactLess")]
+        [Route("ContactLess2")]
+        [Route("home/ContactLess")]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = Session["Index"];
+            ViewBag.Message = TempData["Index"];
 
             return View();
         }
 
         [HttpPost]
         public ActionResult Calc(CurrencyViewModel data)
+        {
+            var random = new Random().Next(2, 4);
+            return Json(random, JsonRequestBehavior.AllowGet);
+        }
+
+
+        [HttpPost]
+        [OutputCache(Duration =10,  VaryByParam = "country")]
+        public ActionResult LoadCountryCities(string country)
         {
             var random = new Random().Next(2, 4);
             return Json(random, JsonRequestBehavior.AllowGet);

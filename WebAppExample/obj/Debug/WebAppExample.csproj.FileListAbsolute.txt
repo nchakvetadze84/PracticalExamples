@@ -72,8 +72,8 @@ D:\Projects\PracticalExamples\WebAppExample\bin\System.Web.WebPages.Razor.xml
 D:\Projects\PracticalExamples\WebAppExample\bin\Newtonsoft.Json.xml
 D:\Projects\PracticalExamples\WebAppExample\bin\Antlr3.Runtime.pdb
 D:\Projects\PracticalExamples\WebAppExample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Projects\PracticalExamples\WebAppExample\obj\Debug\WebAppExample.csprojAssemblyReference.cache
 D:\Projects\PracticalExamples\WebAppExample\obj\Debug\WebAppExample.csproj.CoreCompileInputs.cache
 D:\Projects\PracticalExamples\WebAppExample\obj\Debug\WebAppExample.csproj.CopyComplete
 D:\Projects\PracticalExamples\WebAppExample\obj\Debug\WebAppExample.dll
 D:\Projects\PracticalExamples\WebAppExample\obj\Debug\WebAppExample.pdb
+D:\Projects\PracticalExamples\WebAppExample\obj\Debug\WebAppExample.csproj.AssemblyReference.cache

@@ -20,7 +20,9 @@ namespace WebAppExample.Models
     public class CurrencyViewModel
     {
         public string FromCurrency { set; get; }
-
+        public decimal FromAmount { set; get; }
+        public string ToCurrency { set; get; }
+        public decimal ToAmount { set; get; }
 
         public List<SelectListItem> Curnecies { set; get;  }
     }
